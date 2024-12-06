@@ -122,7 +122,7 @@ header {
 }
 
 .content {
-  font-family: "Calligraffitti", cursive;
+  /* font-family: "Calligraffitti", cursive; */
   font-size: 18px;
   line-height: 1.5;
   padding: 20px;
