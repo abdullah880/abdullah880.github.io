@@ -1,17 +1,16 @@
-window.addEventListener("load", () => {
-  // Wait for 2 seconds after the page is fully loaded
-  setTimeout(() => {
-    const audio = document.getElementById("myAudio");
+// window.addEventListener("load", () => {
+//   // Wait for 2 seconds after the page is fully loaded
+//   setTimeout(() => {
+//     const audio = document.getElementById("myAudio");
 
-    if (audio) {
-      // Unmute the audio after 2 seconds
-      audio.muted = false;
-      audio.play().catch((error) => {
-        console.log("Error playing audio: ", error);
-      });
-    }
-  }, 2000); // 2000 milliseconds = 2 seconds
-});
+//     if (audio) {
+//       // Unmute the audio after 2 seconds
+//       audio.play().catch((error) => {
+//         console.log("Error playing audio: ", error);
+//       });
+//     }
+//   }, 2000); // 2000 milliseconds = 2 seconds
+// });
 const contentArea = document.querySelector(".content");
 const heartContentArea = document.querySelector(".heart-content");
 const tapToContinue = document.querySelector(".tap-to-continue");
@@ -60,6 +59,12 @@ const paragraph = [
       }
 
       tapToContinue.addEventListener("click", function () {
+        const audio = document.getElementById("myAudio");
+        if (audio) {
+          audio.play().catch((error) => {
+            console.log("Error playing audio: ", error);
+          });
+        }
         document.querySelector(".header-text").style.display = "none";
         tapToContinue.style.display = "none";
         notebookContainer.classList.add("show");
