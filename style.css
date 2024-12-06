@@ -55,10 +55,12 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: transform 0.3s ease;
+  display: none;
 }
 
 .tap-to-continue:hover {
   transform: scale(1.1);
+  color: #ff66cc;
 }
 
 .notebook-container {
@@ -122,7 +124,7 @@ header {
 }
 
 .content {
-  /* font-family: "Calligraffitti", cursive; */
+  font-family: "Calligraffitti", cursive;
   font-size: 18px;
   line-height: 1.5;
   padding: 20px;
@@ -177,12 +179,12 @@ header {
 }
 
 .alter-btn-yes {
-  color: #ffafcc;
-  border-color: #ffafcc;
+  color: #f790b5;
+  border-color: #f790b5;
 }
 
 .alter-btn-yes:hover {
-  background-color: #ffafcc;
+  background-color: #f790b5;
   color: #fff;
   transform: scale(1.05);
 }
@@ -287,7 +289,7 @@ header {
 
 @media (max-width: 480px) {
   .header-text {
-    font-size: 4rem;
+    font-size: 6rem;
     letter-spacing: 0.05rem;
     text-shadow: 
     2px 2px 0px #ffb650,
@@ -313,7 +315,6 @@ header {
   overflow-y: auto; /* Enable vertical scrolling when content exceeds height */
     scroll-behavior: smooth; /* Optional: adds smooth scrolling */
 }
-
   .alert-container h2 {
     font-size: 18px;
   }

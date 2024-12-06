@@ -17,6 +17,8 @@ const speed = 30;
 let sentenceIndex = 0;
 let charIndex = 0;
 
+setTimeout(() => {tapToContinue.style.display = "block";}, 1000);
+  
 function typeWriter() {
   if (sentenceIndex < paragraph.length) {
     if (charIndex < paragraph[sentenceIndex].length) {
@@ -49,6 +51,7 @@ function typeWriter() {
 tapToContinue.addEventListener("click", function () {
   const audio = document.getElementById("myAudio");
   if (audio) {
+    audio.loop = true;
     audio.play().catch((error) => {
       console.log("Error playing audio: ", error);
     });
@@ -82,4 +85,10 @@ yesButton.addEventListener("click", () => {
 
 noButton.addEventListener("click", () => {
   alertContainer.classList.toggle("show");
+  alertContainer.classList.remove("show");
+  
+  // Trigger a reflow to ensure the class is removed before re-adding
+  void alertContainer.offsetWidth; // This is the trick to force a reflow
+  
+  alertContainer.classList.add("show");
 });
