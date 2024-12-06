@@ -199,7 +199,7 @@ header {
 }
 
 .heart-container {
-  width: 50%;
+  width: 80%;
   height: 500px;
   margin: auto;
   align-items: center;
@@ -288,7 +288,14 @@ header {
 @media (max-width: 480px) {
   .header-text {
     font-size: 4rem;
-
+    letter-spacing: 0.05rem;
+    text-shadow: 
+    2px 2px 0px #ffb650,
+    4px 4px 0px #ffd662,
+    6px 6px 0px #ff80bf,
+    8px 8px 0px #ef5097, 
+    10px 10px 0px #6868ac,
+    12px 12px 0px #90b1e0;
   }
 
   .tap-to-continue {
@@ -306,6 +313,7 @@ header {
   overflow-y: auto; /* Enable vertical scrolling when content exceeds height */
     scroll-behavior: smooth; /* Optional: adds smooth scrolling */
 }
+
   .alert-container h2 {
     font-size: 18px;
   }
@@ -314,5 +322,16 @@ header {
   .alter-btn-no {
     font-size: 14px;
     padding: 8px 12px;
+  }
+  .heart-content {
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+    text-shadow: 
+    1px 1px 0px #ffb650,
+    2px 2px 0px #ffd662,
+    3px 3px 0px #ff80bf,
+    4px 4px 0px #ef5097, 
+    5px 5px 0px #6868ac,
+    6px 6px 0px #90b1e0;
   }
 }
